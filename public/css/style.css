@@ -1,0 +1,9 @@
+.face {
+  border-radius: 30px;
+  width: 48px;
+  margin: 16px;
+}
+
+md-input-container.md-block.search {
+    margin-top: 65px;
+}

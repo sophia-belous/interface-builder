@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--<meta charset="UTF-8"  name="viewport" content="initial-scale=1>-->
+        <meta charset="UTF-8">
+        <base href="/">
+        <title>Interface builder</title>
+        <link rel="stylesheet" href="./libs/angular-material/angular-material.css" />
+        <link rel="stylesheet" href="./css/style.css">
+        
+    </head>
+    <body ng-app="builderApp" ng-cloak>
+        <md-toolbar md-scroll-shrink>
+            <div class="md-toolbar-tools">
+                <img ng-src="/uploads/logo.png" class="logo face">
+                <h3 ui-sref="customers"><span>Builder Joy</span></h3>
+            </div>
+        </md-toolbar>
+        <div ui-view></div>
+        <script src="./libs/angular/angular.js"></script>
+        <script src="./libs/angular-animate/angular-animate.js"></script>
+        <script src="./libs/angular-aria/angular-aria.js"></script>
+        <script src="./libs/angular-messages/angular-messages.js"></script>
+        <script src="./libs/angular-material/angular-material.js"></script>
+        <script src="./libs/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="./libs/lodash/lodash.js"></script>
+        <script src="./libs/restangular/dist/restangular.js"></script>
+        <script src="./libs/angular-file-model/angular-file-model.js"></script>
+        <script src="./libs/angular-material-icons/angular-material-icons.min.js"></script>
+        
+        <script src="./js/app.js"></script>
+        <script src="./js/appConfig.js"></script>
+        <script src="./js/common/commonModule.js"></script>
+        <script src="./js/pages/pageModule.js"></script>
+        <script src="./js/common/services/configuredRestangular.js"></script>
+        <script src="./js/pages/services/pageSrvc.js"></script>
+        <script src="./js/pages/controllers/pageCtrl.js"></script>
+                 
+    </body>
+</html>

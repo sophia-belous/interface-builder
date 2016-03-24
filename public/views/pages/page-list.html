@@ -1,0 +1,22 @@
+<div class="md-toolbar-tools">
+    <h2><span>{{testline}}</span></h2>
+    <span flex></span>    
+    <md-input-container class="md-block search">
+        <label>Search</label>
+        <input type="search" ng-model="searchText">
+    </md-input-container>
+    <span flex></span>
+</div> 
+<md-content>
+    <md-list>
+        <md-list-item ng-repeat="page in pages | filter: searchText" class="md-3-line order-item">
+            <img ng-src="/uploads/cherry-icon.png" class="face">
+            <div class="md-list-item-text">
+                <h3>{{page.name}}</h3>
+                <p>tag</p>
+                <p>html</p>
+            </div>
+            <md-divider md-inset ng-if="!$last"></md-divider>
+        </md-list-item>        
+    </md-list>
+</md-content>
