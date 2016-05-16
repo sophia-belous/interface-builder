@@ -1,0 +1,30 @@
+<div layout="column" ng-cloak style="height:800px;">
+  <section layout="row" flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+      <md-content layout-padding>
+        <md-list>
+          <md-subheader class="md-no-sticky">Components</md-subheader>
+          <md-list-item ng-repeat="item in lists.templates"
+                        dnd-draggable="item"
+                        dnd-effect-allowed="copy"
+                        dnd-copied="item.id = item.id + 1">
+            <md-button class="md-raised md-warn" ng-disabled="disabled">{{item.type}}</md-button>
+          </md-list-item>
+          <md-divider></md-divider>
+        </md-list>
+      </md-content>
+      <md-content ng-if="lists.selected">
+        <h3>Selected</h3>
+        <md-input-container class="md-icon-float md-block">
+          <label>Type: {{lists.selected.type}}</label>
+          <input ng-model="lists.selected.id" type="text">
+        </md-input-container>
+      </md-content>
+    </md-sidenav>
+    <md-content flex layout-padding>
+      <div layout="column" layout-fill layout-align="top center">
+      </div>
+      <div flex></div>
+    </md-content>
+  </section>
+</div>

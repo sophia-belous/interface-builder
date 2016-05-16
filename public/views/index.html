@@ -13,7 +13,7 @@
         <md-toolbar md-scroll-shrink>
             <div class="md-toolbar-tools">
                 <img ng-src="/uploads/logo.png" class="logo face">
-                <h3 ui-sref="customers"><span>Builder Joy</span></h3>
+                <h3 ui-sref="editor" style="cursor: pointer"><span>Builder Joy</span></h3>
             </div>
         </md-toolbar>
         <div ui-view></div>
@@ -22,6 +22,7 @@
         <script src="./libs/angular-aria/angular-aria.js"></script>
         <script src="./libs/angular-messages/angular-messages.js"></script>
         <script src="./libs/angular-material/angular-material.js"></script>
+        <script src="./libs/angular-drag-and-drop-lists/angular-drag-and-drop-lists.min.js"></script>
         <script src="./libs/angular-ui-router/release/angular-ui-router.js"></script>
         <script src="./libs/lodash/lodash.js"></script>
         <script src="./libs/restangular/dist/restangular.js"></script>
@@ -32,9 +33,11 @@
         <script src="./js/appConfig.js"></script>
         <script src="./js/common/commonModule.js"></script>
         <script src="./js/pages/pageModule.js"></script>
+        <script src="./js/editor/editorModule.js"></script>
         <script src="./js/common/services/configuredRestangular.js"></script>
         <script src="./js/pages/services/pageSrvc.js"></script>
         <script src="./js/pages/controllers/pageCtrl.js"></script>
+        <script src="./js/editor/controllers/editCtrl.js"></script>
                  
     </body>
 </html>
