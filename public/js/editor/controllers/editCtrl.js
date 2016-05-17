@@ -3,7 +3,7 @@
     angular.module('editor').controller('EditController', EditController);
 
     function EditController($scope, $http) {
-        $scope.lists = [];
+        $scope.lists = {};
         $http.get('./data/lists.json').success(function (data) {
             $scope.lists = data;
         });

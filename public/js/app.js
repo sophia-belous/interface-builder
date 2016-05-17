@@ -4,6 +4,7 @@
 		'restangular',
 		'dndLists',
 		'ui.router',
+		'ui.bootstrap',
 		'ngMaterial',
 		'ngMessages',
 		'ngMdIcons',

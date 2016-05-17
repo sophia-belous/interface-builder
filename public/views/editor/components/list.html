@@ -1,0 +1,14 @@
+<ul dnd-list="list">
+    <li class="md-2-line"
+        ng-repeat="item in list"
+        dnd-draggable="item"
+        dnd-effect-allowed="move"
+        dnd-moved="list.splice($index, 1)"
+        dnd-selected="lists.selected = item"
+        ng-class="{selected: lists.selected === item}">
+        
+        <wm-item ng-if="item.type === 'item'"></wm-item>
+        <wm-container ng-if="item.type === 'container'"></wm-container>
+        
+    </li>
+</ul>

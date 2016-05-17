@@ -1,19 +1,18 @@
-<div layout="column" ng-cloak style="height:800px;">
-  <section layout="row" flex>
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+<div layout="column" ng-cloak>
+  <section layout="row">
+    <md-sidenav style="height:890px;" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="true" md-component-id="left">
       <md-content layout-padding>
-        <md-list>
-          <md-subheader class="md-no-sticky">Components</md-subheader>
-          <md-list-item ng-repeat="item in lists.templates"
+        <md-subheader class="md-no-sticky">Components</md-subheader>
+        <ul>
+          <li ng-repeat="item in lists.templates"
                         dnd-draggable="item"
                         dnd-effect-allowed="copy"
                         dnd-copied="item.id = item.id + 1">
             <md-button class="md-raised md-warn" ng-disabled="disabled">{{item.type}}</md-button>
-          </md-list-item>
-          <md-divider></md-divider>
-        </md-list>
+          </li>
+        </ul>
       </md-content>
-      <md-content ng-if="lists.selected">
+      <md-content ng-if="lists.selected" layout-padding>
         <h3>Selected</h3>
         <md-input-container class="md-icon-float md-block">
           <label>Type: {{lists.selected.type}}</label>
@@ -21,10 +20,17 @@
         </md-input-container>
       </md-content>
     </md-sidenav>
-    <md-content flex layout-padding>
-      <div layout="column" layout-fill layout-align="top center">
+    <div class="container">
+      <div class="row">
+        <div ng-repeat="(zone, list) in lists.dropzones" class="col-md-6">
+            <div class="dropzone box box-yellow">
+                <h3>Dropzone {{zone}}</h3>
+                <div class="container">
+                  <wm-list></wm-list>
+                </div>
+            </div>
+        </div>
       </div>
-      <div flex></div>
-    </md-content>
+    </div>
   </section>
 </div>

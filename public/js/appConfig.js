@@ -1,9 +1,9 @@
 (function() {
-	'use strict';
-	angular.module('builderApp').config(appConfig);
-	
-	function appConfig($stateProvider, $locationProvider, RestangularProvider) {
-		RestangularProvider.setBaseUrl('/api');
+    'use strict';
+    angular.module('builderApp').config(appConfig);
+
+    function appConfig($stateProvider, $locationProvider, RestangularProvider) {
+        RestangularProvider.setBaseUrl('/api');
         $stateProvider
                 .state('pages', {
                     url: '/',
@@ -15,6 +15,6 @@
                     templateUrl: 'views/editor/edit-page.html',
                     controller: 'EditController'
                 });
-        $locationProvider.html5Mode(true);       
-	}
+        $locationProvider.html5Mode(true);
+    }
 })();
