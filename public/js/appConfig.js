@@ -11,8 +11,13 @@
                     controller: 'PageController'
                 })
                 .state('editor', {
-                    url: '/edit',
+                    url: '/editor',
                     templateUrl: 'views/editor/edit-page.html',
+                    controller: 'EditController'
+                })
+                .state('edit', {
+                    url: '/edit',
+                    templateUrl: 'views/editor/edit.html',
                     controller: 'EditController'
                 });
         $locationProvider.html5Mode(true);

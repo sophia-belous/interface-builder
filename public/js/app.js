@@ -1,16 +1,17 @@
-(function() {
+(function () {
 	'use strict';
 	angular.module('builderApp', [
 		'restangular',
-		'dndLists',
 		'ui.router',
+		'ngAnimate',
 		'ui.bootstrap',
+		'dndLists',
 		'ngMaterial',
 		'ngMessages',
 		'ngMdIcons',
-        'common',
-        'page',
-        'editor',
+		'common',
+		'page',
+		'editor',
 		'file-model'
 	]);
 })();

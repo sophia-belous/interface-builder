@@ -6,8 +6,7 @@
         return {
             restrict: 'E',
             templateUrl: 'views/editor/components/list.html',
-            scope: false,
-            replace: true 
+            scope: false
         };
     }
 })();

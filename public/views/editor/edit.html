@@ -9,6 +9,13 @@
                         dnd-effect-allowed="copy"
                         dnd-copied="item.id = item.id + 1">
             <md-button class="md-raised md-warn" ng-disabled="disabled">{{item.type}}</md-button>
+            <md-input-container ng-if="item.type === 'grid'">
+              <md-select ng-model="item.class">
+                <md-option ng-repeat="class in lists.classes" value="{{class}}">
+                  {{class}}
+                </md-option>
+              </md-select>
+            </md-input-container>
           </li>
         </ul>
       </md-content>
@@ -23,7 +30,7 @@
     <md-content class="col-md-12" layout-padding>
         <div ng-repeat="(zone, list) in lists.dropzones">
             <div class="dropzone box box-yellow">
-                <h3>Dropzone {{zone}}</h3>
+                <h3>{{zone}}</h3>
                 <wm-list class="column"></wm-list>
             </div>
         </div>
