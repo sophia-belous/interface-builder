@@ -1,5 +1,5 @@
-<ul dnd-list="list">
-    <li class="md-2-line"
+<div dnd-list="list" class="ul">
+    <div class="li"
         ng-repeat="item in list"
         dnd-draggable="item"
         dnd-effect-allowed="move"
@@ -9,6 +9,5 @@
         
         <wm-item ng-if="item.type === 'item'"></wm-item>
         <wm-container ng-if="item.type === 'container'"></wm-container>
-        <wm-grid ng-if="item.type === 'grid'"></wm-grid>
-    </li>
-</ul>
+    </div>
+</div>

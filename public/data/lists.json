@@ -2,16 +2,83 @@
     "selected": null,
     "templates": [
         {"type": "item", "id": 2},
-        {"type": "container", "id": 1, "columns": [ [],[] ]},
-        {"type": "grid", "id": 0, "columns": [], "class": "col-md-12"}
+        {"type": "container", "id": 1, "class": { "name": ["col-md-12"], "columns": [[]]}}
     ],
     "classes": [
-        "col-md-12",
-        "col-md-6",
-        "col-md-4",
-        "col-md-3"
+        {
+            "name": "col-md-1",
+            "columns": [[], [], [], [], [], [], [], [], [], [], [], []]
+        },
+        {
+            "name": "col-md-2",
+            "columns": [[], [], [], [], [], []]
+        },
+        {
+            "name": "col-md-3",
+            "columns": [[], [], [], []]
+        },
+        {
+            "name": "col-md-4",
+            "columns": [[], [], []]
+        },
+        {
+            "name": "col-md-5",
+            "columns": [[], []]
+        },
+        {
+            "name": "col-md-6",
+            "columns": [[], []]
+        },
+        {
+            "name": "col-md-7",
+            "columns": [[]]
+        },
+        {
+            "name": "col-md-8",
+            "columns": [[]]
+        },
+        {
+            "name": "col-md-9",
+            "columns": [[]]
+        },
+        {
+            "name": "col-md-10",
+            "columns": [[]]
+        },
+        {
+            "name": "col-md-11",
+            "columns": [[]]
+        },
+        {
+            "name": "col-md-12",
+            "columns": [[]]
+        }
     ],
     "dropzones": {
-            "Container": []
-        }
+        "Container": []
+    },
+    "default": {
+        "classes": [
+            {
+                "value": "6 6",
+                "name": ["col-md-6", "col-md-6"],
+                "columns": [[], []]
+            },
+            {
+                "value": "4 8",                
+                "name": ["col-md-4", "col-md-8"],
+                "columns": [[], []]
+            },
+            {
+                "value": "4 4 4",
+                "name": ["col-md-4", "col-md-4", "col-md-4"],
+                "columns": [[], [], []]
+            },
+            {
+                "value": "3 6 3",
+                "name": ["col-md-3", "col-md-6", "col-md-3"],
+                "columns": [[], [], []]
+            }
+        ]
+    }
 }

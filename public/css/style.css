@@ -8,24 +8,31 @@ md-input-container.md-block.search {
     margin-top: 65px;
 }
 
-ul[dnd-list],
-ul[dnd-list] > li {
+div.ul[dnd-list],
+div.ul[dnd-list] > div.li {
 	position: relative;
 }
 
 /***************************** Dropzone Styling *****************************/
 
-.dropzone ul[dnd-list] {
-    min-height: 800px;
+.dropzone div.ul[dnd-list] {
+    min-height: 40px;
     margin: 0px;
-    padding-left: 0px;
+    padding: 10px 0;
 }
 
-.dropzone li {
+.dropzone > div.ul[dnd-list] {
+    min-height: 800px !important;
+    padding: 0px !important;
+    
+}
+
+.dropzone div.li {
     background-color: #fff;
     border: 1px solid #ddd;
     display: block;
     padding: 0px;
+    margin-bottom: 10px;
 }
 
 /**
@@ -85,10 +92,7 @@ ul[dnd-list] > li {
     margin: 10px;
 }
 
-.dropzone .container-element .column {
-    float: left;
-    width: 50%;
-}
+
 
 .dropzone .grid {
     padding: 10px 15px;
