@@ -1,0 +1,11 @@
+<!--<div view-source="nested"></div>
+<h2>Generated Model</h2>
+<pre>{{modelAsJson}}</pre>-->
+<md-content class="col-md-12" layout-padding>
+        <div ng-repeat="(zone, list) in lists.dropzones">
+            <div class="dropzone box box-yellow">
+                <h3 class="dropzone-h3">{{zone}}</h3>
+                <wm-list class="column"></wm-list>
+            </div>
+        </div>
+</md-content>

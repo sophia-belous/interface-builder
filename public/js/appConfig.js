@@ -10,15 +10,15 @@
                     templateUrl: 'views/pages/page-list.html',
                     controller: 'PageController'
                 })
-                .state('editor', {
-                    url: '/editor',
-                    templateUrl: 'views/editor/edit-page.html',
-                    controller: 'EditController'
-                })
                 .state('edit', {
                     url: '/edit',
                     templateUrl: 'views/editor/edit.html',
                     controller: 'EditController'
+                })
+                .state('preview', {
+                    url: '/preview',
+                    templateUrl: 'views/editor/preview.html',
+                    controller: 'PreviewController'
                 });
         $locationProvider.html5Mode(true);
     }

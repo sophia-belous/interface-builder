@@ -5,7 +5,7 @@
 	function PageController($scope, Page) {
 		 $scope.testline = 'Pages'
 		
-		$scope.pages = [];      
+		$scope.pages = [];
 
 		Page.getAll().then(function(pages) {
 			$scope.pages = pages.plain();

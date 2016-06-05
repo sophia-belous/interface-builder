@@ -2,10 +2,10 @@
     'use strict';
     angular.module('editor').controller('EditController', EditController);
 
-    function EditController($scope, $http) {
+    function EditController($scope, $http, DomSrvc, $state) {
+        $scope.currentState = 'Edit';
         $scope.lists = {};
-        $scope.changeSettingsOfTemplate = changeSettingsOfTemplate;
-        // $scope.sizeOfColumns = '6 6';
+        var dropzoneId;
         $scope.columnPattern = (function() {
             return {
                 test: function(value) {
@@ -36,18 +36,26 @@
         
         $http.get('./data/lists.json').success((data) => {
             $scope.lists = data;
-        });
-        // $scope.$watch('lists.dropzones', function (model) {
-        //     $scope.modelAsJson = angular.toJson(model, true);
-        // }, true);
-        
-        
-        // $scope.$watch('lists.templates', function (templates) {
-        //     console.log(templates)
-        // }, true);
-        
-        function changeSettingsOfTemplate() {
             
-        }
+            DomSrvc.getDom().then(function(model) {
+                var obj = model.plain();
+                dropzoneId = obj[0]._id;
+                $scope.lists.dropzones = obj[0].dropzone;
+            });
+        });
+        
+        
+        $scope.$watch('lists.dropzones', function (model) {
+            $scope.modelAsJson = angular.toJson(model, true);
+            $scope.model = model;
+            if(dropzoneId)
+                DomSrvc.updateDom(dropzoneId, $scope.model);
+        }, true);
+        
+        
+        
+        // $scope.$on('$destroy', function() {
+        //     DomSrvc.updateDom(dropzoneId, $scope.model);
+        // })
     }
 })();

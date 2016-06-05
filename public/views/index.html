@@ -15,8 +15,13 @@
         <md-toolbar md-scroll-shrink>
             <div class="md-toolbar-tools">
                 <img ng-src="/uploads/logo.png" class="logo face">
-                <h3 ui-sref="editor" style="cursor: pointer"><span>Builder Joy</span></h3>
+                <h3 ui-sref="edit" style="cursor: pointer"><span>Builder Joy</span></h3>
+                <span flex></span>
+                <md-button ui-sref="preview" class="md-primary" aria-label="Preview">
+                    Preview
+                </md-button>
             </div>
+            
         </md-toolbar>
         <div ui-view></div>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -42,12 +47,14 @@
         <script src="./js/editor/editorModule.js"></script>
         <script src="./js/common/services/configuredRestangular.js"></script>
         <script src="./js/pages/services/pageSrvc.js"></script>
+        <script src="./js/editor/services/domDataSrvc.js"></script>
         <script src="./js/editor/directives/list.js"></script>
         <script src="./js/editor/directives/container.js"></script>
         <script src="./js/editor/directives/item.js"></script>
         
         <script src="./js/pages/controllers/pageCtrl.js"></script>
         <script src="./js/editor/controllers/editCtrl.js"></script>
+        <script src="./js/editor/controllers/previewCtrl.js"></script>
                  
     </body>
 </html>

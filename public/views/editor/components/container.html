@@ -1,5 +1,5 @@
 <div class="container-element box box-blue row">
-    <h3>Container {{item.id}}</h3>
+    <h3 ng-if="currentState === Edit">Container {{item.id}}</h3>
     <div class="column element-body" ng-class="item.class.name[$index]" ng-repeat="list in item.class.columns">
         <wm-list></wm-list>
     </div>
